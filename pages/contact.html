@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt | Fachkräftebrücke – Wir sind für Sie da</title>
+    <meta
+      name="description"
+      content="Kontaktieren Sie die Fachkräftebrücke: Für Arbeitgeber, Bewerber oder allgemeine Anfragen. Wir antworten schnell und persönlich."
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  </head>
+  <body>
+    <!-- Cookie Banner -->
+    <div id="cookieConsent" class="cookie-banner">
+      <div class="cookie-content">
+        <p>
+          Wir verwenden Cookies für eine bessere Nutzererfahrung.
+          <a href="datenschutz.html">Datenschutz</a>
+        </p>
+        <button id="cookieAccept" class="btn btn-small">Akzeptieren</button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo">
+            <a href="../index.html">
+              <img
+                src="/logo.png"
+                alt="Fachkräftebrücke"
+                width="220px"
+                height="140px"
+              />
+            </a>
+          </div>
+          <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+              <li><a href="../index.html" class="nav-link">Startseite</a></li>
+              <li>
+                <a href="employers.html" class="nav-link">Für Arbeitgeber</a>
+              </li>
+              <li>
+                <a href="candidates.html" class="nav-link">Für Fachkräfte</a>
+              </li>
+              <li><a href="about.html" class="nav-link">Über uns</a></li>
+              <li>
+                <a href="contact.html" class="nav-link active">Kontakt</a>
+              </li>
+            </ul>
+            <div class="language-selector">
+              <span class="current-lang">DE</span>
+              <ul class="lang-dropdown">
+                <li><a href="#" class="disabled">EN (soon)</a></li>
+                <li><a href="#" class="disabled">FR (soon)</a></li>
+                <li><a href="#" class="disabled">AR (soon)</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero-Bereich -->
+      <section class="page-hero">
+        <div class="container">
+          <span class="mission-badge">Von Fachkräften für Fachkräfte</span>
+          <h1>Kontakt</h1>
+          <p class="subheadline">
+            Sie haben Fragen? Wir sind für Sie da – schnell, persönlich und
+            unkompliziert.
+          </p>
+        </div>
+      </section>
+
+      <!-- Kontaktkarten (eine E-Mail für alle) -->
+
+      <!-- Kontaktformular (optional, aber sinnvoll) -->
+      <section class="section section-light-gray">
+        <div class="container">
+          <div class="contact-form-section">
+            <h2 class="text-center" style="margin-bottom: var(--space-lg)">
+              Schreiben Sie uns direkt hier – wir freuen uns auf Ihre Nachricht!
+            </h2>
+
+            <form id="contactForm" action="#" method="POST" class="form-grid">
+              <!-- Name -->
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <!-- E-Mail -->
+              <div class="form-group">
+                <label for="email">E-Mail *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <!-- Betreff (Dropdown) -->
+              <div class="form-group full-width">
+                <label for="subject">Betreff *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Bitte wählen</option>
+                  <option value="employer">Anfrage als Arbeitgeber</option>
+                  <option value="candidate">Anfrage als Bewerber</option>
+                  <option value="general">Allgemeine Anfrage</option>
+                </select>
+              </div>
+
+              <!-- Nachricht -->
+              <div class="form-group full-width">
+                <label for="message">Nachricht *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Datenschutz-Checkbox -->
+              <div class="gdpr-checkbox">
+                <input type="checkbox" id="privacy" name="privacy" required />
+                <label for="privacy">
+                  Ich habe die
+                  <a href="datenschutz.html">Datenschutzerklärung</a> gelesen
+                  und stimme zu, dass meine Angaben zur Bearbeitung meiner
+                  Anfrage gespeichert werden. *
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group full-width text-center">
+                <button type="submit" class="btn btn-primary btn-large">
+                  <i class="fas fa-paper-plane"></i> Nachricht senden
+                </button>
+              </div>
+
+              <!-- Hinweis -->
+              <p
+                class="small-text text-center"
+                style="grid-column: span 2; color: var(--medium-gray)"
+              >
+                * Pflichtfelder. Ihre Daten werden vertraulich behandelt.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (wie in deiner "Über uns"-Seite) -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <!-- Hier optional weißes Logo -->
+            </div>
+            <p class="footer-tagline">
+              Von Fachkräften für Fachkräfte – Brücken zwischen Tunesien und
+              Deutschland.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Kontakt</h3>
+            <p>
+              <i class="fas fa-envelope"></i> kooperationen@fachkraftebrucke.de
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Rechtliches</h3>
+            <ul>
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+              <li><a href="agb.html">AGB</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Fachkräftebrücke GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
