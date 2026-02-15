@@ -1694,3 +1694,43 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ===== CONTENT CARD ===== */
+.content-card {
+  background: white;
+  border-radius: 20px;
+  padding: 60px;
+  box-shadow: 0 25px 60px rgba(10, 36, 99, 0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.lead-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: var(--space-md);
+}
+
+/* ===== CTA PREMIUM ===== */
+.cta-premium {
+  background: linear-gradient(135deg, #0a2463, #1d7874);
+  padding: 70px;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.cta-premium h2 {
+  color: white;
+  margin-bottom: var(--space-sm);
+}
+
+.cta-premium p {
+  max-width: 600px;
+  margin: 0 auto var(--space-lg);
+}
