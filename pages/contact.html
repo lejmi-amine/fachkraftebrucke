@@ -8,7 +8,6 @@
       name="description"
       content="Kontaktieren Sie die Fachkräftebrücke: Für Arbeitgeber, Bewerber oder allgemeine Anfragen. Wir antworten schnell und persönlich."
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,7 +17,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
-
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
   </head>
   <body>
@@ -87,9 +85,6 @@
         </div>
       </section>
 
-      <!-- Kontaktkarten (eine E-Mail für alle) -->
-
-      <!-- Kontaktformular (optional, aber sinnvoll) -->
       <section class="section section-light-gray">
         <div class="container">
           <div class="contact-form-section">
@@ -97,7 +92,55 @@
               Schreiben Sie uns direkt hier – wir freuen uns auf Ihre Nachricht!
             </h2>
 
-            <form id="contactForm" action="#" method="POST" class="form-grid">
+            <!-- Erfolgsmeldung -->
+            <div
+              id="formSuccess"
+              style="
+                display: none;
+                background: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+                border-radius: 8px;
+                padding: 16px 24px;
+                margin-bottom: 24px;
+                text-align: center;
+              "
+            >
+              <i class="fas fa-check-circle" style="margin-right: 8px"></i>
+              Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns bald
+              bei Ihnen.
+            </div>
+
+            <!-- Fehlermeldung -->
+            <div
+              id="formError"
+              style="
+                display: none;
+                background: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+                border-radius: 8px;
+                padding: 16px 24px;
+                margin-bottom: 24px;
+                text-align: center;
+              "
+            >
+              <i
+                class="fas fa-exclamation-circle"
+                style="margin-right: 8px"
+              ></i>
+              Fehler beim Senden. Bitte schreiben Sie uns direkt an
+              <a href="mailto:kooperationen@fachkraftebrucke.de"
+                >kooperationen@fachkraftebrucke.de</a
+              >
+            </div>
+
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xjgaezvv"
+              method="POST"
+              class="form-grid"
+            >
               <!-- Name -->
               <div class="form-group">
                 <label for="name">Name *</label>
@@ -110,7 +153,7 @@
                 <input type="email" id="email" name="email" required />
               </div>
 
-              <!-- Betreff (Dropdown) -->
+              <!-- Betreff -->
               <div class="form-group full-width">
                 <label for="subject">Betreff *</label>
                 <select id="subject" name="subject" required>
@@ -132,7 +175,7 @@
                 ></textarea>
               </div>
 
-              <!-- Datenschutz-Checkbox -->
+              <!-- Datenschutz -->
               <div class="gdpr-checkbox">
                 <input type="checkbox" id="privacy" name="privacy" required />
                 <label for="privacy">
@@ -143,14 +186,13 @@
                 </label>
               </div>
 
-              <!-- Submit Button -->
+              <!-- Submit -->
               <div class="form-group full-width text-center">
                 <button type="submit" class="btn btn-primary btn-large">
                   <i class="fas fa-paper-plane"></i> Nachricht senden
                 </button>
               </div>
 
-              <!-- Hinweis -->
               <p
                 class="small-text text-center"
                 style="grid-column: span 2; color: var(--medium-gray)"
@@ -163,14 +205,12 @@
       </section>
     </main>
 
-    <!-- Footer (wie in deiner "Über uns"-Seite) -->
+    <!-- Footer -->
     <footer class="main-footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <div class="footer-logo">
-              <!-- Hier optional weißes Logo -->
-            </div>
+            <div class="footer-logo"></div>
             <p class="footer-tagline">
               Von Fachkräften für Fachkräfte – Brücken zwischen Tunesien und
               Deutschland.
@@ -198,5 +238,37 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.innerHTML =
+          '<i class="fas fa-spinner fa-spin"></i> Wird gesendet...';
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+
+          if (response.ok) {
+            form.style.display = "none";
+            document.getElementById("formSuccess").style.display = "block";
+          } else {
+            document.getElementById("formError").style.display = "block";
+            btn.disabled = false;
+            btn.innerHTML =
+              '<i class="fas fa-paper-plane"></i> Nachricht senden';
+          }
+        } catch (err) {
+          document.getElementById("formError").style.display = "block";
+          btn.disabled = false;
+          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Nachricht senden';
+        }
+      });
+    </script>
   </body>
 </html>
