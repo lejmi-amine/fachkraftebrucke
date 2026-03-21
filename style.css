@@ -1734,3 +1734,45 @@ body {
   max-width: 600px;
   margin: 0 auto var(--space-lg);
 }
+
+/* ===== RTL SUPPORT (Arabic) ===== */
+html[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .main-nav {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-subtitle {
+  text-align: right;
+}
+
+html[dir="rtl"] .btn i {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+html[dir="rtl"] .feature-card, 
+html[dir="rtl"] .step-content, 
+html[dir="rtl"] .req-card,
+html[dir="rtl"] .content-card,
+html[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .checklist li {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+html[dir="rtl"] .checklist li::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .footer-section {
+  text-align: right;
+}
