@@ -8,6 +8,7 @@
       name="description"
       content="Kontaktieren Sie die Fachkräftebrücke: Für Arbeitgeber, Bewerber oder allgemeine Anfragen. Wir antworten schnell und persönlich."
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -17,7 +18,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+
+    <link rel="icon" type="image/png" href="../logo.png" />
   </head>
   <body>
     <!-- Cookie Banner -->
@@ -37,7 +39,12 @@
         <div class="header-inner">
           <div class="logo">
             <a href="../index.html">
-              <img src="/fachkraftebrucke/logo_4k.png" alt="Fachkräftebrücke" />
+              <img
+                src="../logo_4k.png"
+                alt="Fachkräftebrücke Vermittlungsagentur"
+                width="220px"
+                height="140px"
+              />
             </a>
           </div>
           <button class="menu-toggle" id="menuToggle">
@@ -85,6 +92,9 @@
         </div>
       </section>
 
+      <!-- Kontaktkarten (eine E-Mail für alle) -->
+
+      <!-- Kontaktformular (optional, aber sinnvoll) -->
       <section class="section section-light-gray">
         <div class="container">
           <div class="contact-form-section">
@@ -92,55 +102,16 @@
               Schreiben Sie uns direkt hier – wir freuen uns auf Ihre Nachricht!
             </h2>
 
-            <!-- Erfolgsmeldung -->
-            <div
-              id="formSuccess"
-              style="
-                display: none;
-                background: #d4edda;
-                color: #155724;
-                border: 1px solid #c3e6cb;
-                border-radius: 8px;
-                padding: 16px 24px;
-                margin-bottom: 24px;
-                text-align: center;
-              "
-            >
-              <i class="fas fa-check-circle" style="margin-right: 8px"></i>
-              Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns bald
-              bei Ihnen.
+            <div id="formSuccess" style="display:none; background:#d4edda; color:#155724; border:1px solid #c3e6cb; border-radius:8px; padding:16px 24px; margin-bottom:24px; text-align:center;">
+              <i class="fas fa-check-circle" style="margin-right:8px;"></i>
+              Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns bald bei Ihnen.
+            </div>
+            <div id="formError" style="display:none; background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; border-radius:8px; padding:16px 24px; margin-bottom:24px; text-align:center;">
+              <i class="fas fa-exclamation-circle" style="margin-right:8px;"></i>
+              Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an <a href="mailto:kooperationen@fachkraftebrucke.de">kooperationen@fachkraftebrucke.de</a>.
             </div>
 
-            <!-- Fehlermeldung -->
-            <div
-              id="formError"
-              style="
-                display: none;
-                background: #f8d7da;
-                color: #721c24;
-                border: 1px solid #f5c6cb;
-                border-radius: 8px;
-                padding: 16px 24px;
-                margin-bottom: 24px;
-                text-align: center;
-              "
-            >
-              <i
-                class="fas fa-exclamation-circle"
-                style="margin-right: 8px"
-              ></i>
-              Fehler beim Senden. Bitte schreiben Sie uns direkt an
-              <a href="mailto:kooperationen@fachkraftebrucke.de"
-                >kooperationen@fachkraftebrucke.de</a
-              >
-            </div>
-
-            <form
-              id="contactForm"
-              action="https://formspree.io/f/xjgaezvv"
-              method="POST"
-              class="form-grid"
-            >
+            <form id="contactForm" action="https://formspree.io/f/DEINE_FORMSPREE_ID" method="POST" class="form-grid">
               <!-- Name -->
               <div class="form-group">
                 <label for="name">Name *</label>
@@ -153,7 +124,7 @@
                 <input type="email" id="email" name="email" required />
               </div>
 
-              <!-- Betreff -->
+              <!-- Betreff (Dropdown) -->
               <div class="form-group full-width">
                 <label for="subject">Betreff *</label>
                 <select id="subject" name="subject" required>
@@ -175,7 +146,7 @@
                 ></textarea>
               </div>
 
-              <!-- Datenschutz -->
+              <!-- Datenschutz-Checkbox -->
               <div class="gdpr-checkbox">
                 <input type="checkbox" id="privacy" name="privacy" required />
                 <label for="privacy">
@@ -186,13 +157,14 @@
                 </label>
               </div>
 
-              <!-- Submit -->
+              <!-- Submit Button -->
               <div class="form-group full-width text-center">
                 <button type="submit" class="btn btn-primary btn-large">
                   <i class="fas fa-paper-plane"></i> Nachricht senden
                 </button>
               </div>
 
+              <!-- Hinweis -->
               <p
                 class="small-text text-center"
                 style="grid-column: span 2; color: var(--medium-gray)"
@@ -205,12 +177,14 @@
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (wie in deiner "Über uns"-Seite) -->
     <footer class="main-footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <div class="footer-logo"></div>
+            <div class="footer-logo">
+              <!-- Hier optional weißes Logo -->
+            </div>
             <p class="footer-tagline">
               Von Fachkräften für Fachkräfte – Brücken zwischen Tunesien und
               Deutschland.
@@ -239,36 +213,37 @@
 
     <script src="../script.js"></script>
     <script>
-      const form = document.getElementById("contactForm");
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        const btn = form.querySelector('button[type="submit"]');
-        btn.disabled = true;
-        btn.innerHTML =
-          '<i class="fas fa-spinner fa-spin"></i> Wird gesendet...';
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const submitBtn = form.querySelector('button[type="submit"]');
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Wird gesendet...';
 
-        try {
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: new FormData(form),
-            headers: { Accept: "application/json" },
-          });
-
-          if (response.ok) {
-            form.style.display = "none";
-            document.getElementById("formSuccess").style.display = "block";
-          } else {
-            document.getElementById("formError").style.display = "block";
-            btn.disabled = false;
-            btn.innerHTML =
-              '<i class="fas fa-paper-plane"></i> Nachricht senden';
+          const data = new FormData(form);
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+              form.style.display = 'none';
+              document.getElementById('formSuccess').style.display = 'block';
+            } else {
+              document.getElementById('formError').style.display = 'block';
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Nachricht senden';
+            }
+          } catch (err) {
+            document.getElementById('formError').style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Nachricht senden';
           }
-        } catch (err) {
-          document.getElementById("formError").style.display = "block";
-          btn.disabled = false;
-          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Nachricht senden';
-        }
-      });
+        });
+      }
     </script>
+
   </body>
 </html>
