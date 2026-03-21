@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>اتصل بنا | Fachkräftebrücke</title>
+    <title>اتصل بنا | Fachkräftebrücke – نحن هنا من أجلك</title>
     <meta
       name="description"
-      content="تواصل معنا. نتطلع إلى سماع رسائلكم – لضمان مستقبلك في ألمانيا أو للمستشفيات لدعم فريق الرعاية الخاص بك."
+      content="تواصل مع Fachkräftebrücke: لأصحاب العمل، للمرشحين، أو للاستفسارات العامة. نحن نرد بسرعة وبشكل شخصي."
     />
 
     <link
@@ -17,8 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="../../style.css" />
+
     <link rel="icon" type="image/png" href="../../logo.png" />
   </head>
   <body>
@@ -42,8 +42,8 @@
               <img
                 src="../../logo_4k.png"
                 alt="Fachkräftebrücke وكالة توظيف"
-                width="220"
-                height="140"
+                width="220px"
+                height="140px"
               />
             </a>
           </div>
@@ -62,7 +62,9 @@
                 <a href="candidates.html" class="nav-link">للمرشحين</a>
               </li>
               <li><a href="about.html" class="nav-link">من نحن</a></li>
-              <li><a href="contact.html" class="nav-link active">اتصل بنا</a></li>
+              <li>
+                <a href="contact.html" class="nav-link active">اتصل بنا</a>
+              </li>
             </ul>
             <div class="language-selector">
               <span class="current-lang">AR</span>
@@ -79,123 +81,115 @@
     </header>
 
     <main>
+      <!-- Hero-Bereich -->
       <section class="page-hero">
         <div class="container">
+          <span class="mission-badge">من الكوادر إلى الكوادر</span>
           <h1>اتصل بنا</h1>
           <p class="subheadline">
-            معاً نجد الحل الأمثل. اكتب إلينا للحصول على استشارة أولية بدون أي التزامات.
+            لديك استفسارات؟ نحن هنا من أجلك – بسرعة، بصورة شخصية، وبكل بساطة.
           </p>
         </div>
       </section>
 
-      <section class="section section-white">
+      <!-- Kontaktformular -->
+      <section class="section section-light-gray">
         <div class="container">
-          <div class="contact-wrapper">
-            <!-- Contact Info -->
-            <div class="contact-info">
-              <h2>الاتصال المباشر</h2>
-              <p>سواء كانت لديك أسئلة حول إجراءات العمل، عقود العمل، أو خدماتنا للمرشحين – نحن دائماً هنا للرد.</p>
+          <div class="contact-form-section">
+            <h2 class="text-center" style="margin-bottom: var(--space-lg)">
+              راسلنا مباشرة هنا – نحن نتطلع لرسالتك!
+            </h2>
 
-              <div class="info-block" style="margin-top: 2rem;">
-                <div style="display: flex; align-items:flex-start; margin-bottom: 1.5rem;">
-                  <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--teal); margin-left: 1rem; margin-top: 4px;"></i>
-                  <div>
-                    <h4 style="margin-bottom: 0.25rem;">البريد الإلكتروني للتعاون</h4>
-                    <a href="mailto:kooperationen@fachkraftebrucke.de" style="color: var(--blue); text-decoration: none;">kooperationen@fachkraftebrucke.de</a>
-                  </div>
-                </div>
-
-                <div style="display: flex; align-items:flex-start; margin-bottom: 1.5rem;">
-                  <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--teal); margin-left: 1rem; margin-top: 4px;"></i>
-                  <div>
-                    <h4 style="margin-bottom: 0.25rem;">المكتب</h4>
-                    <p style="color: var(--medium-gray); margin: 0;">(المقر والمكاتب قيد التأسيس النهائي)<br />تونس وألمانيا</p>
-                  </div>
-                </div>
-              </div>
-
-              <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-                <h4 style="color: var(--navy); margin-bottom: 0.5rem;"><i class="fas fa-info-circle"></i> ملاحظات للمرشحين</h4>
-                <p class="small-text" style="margin: 0;">الرجاء تضمين معلومات موجزة ومفيدة حول مستوى تعليمك (أو الدبلوم) الذي تملكه ومستواك في اللغة الألمانية. فهذا سيسهل علينا الإجابة ومساعدتك والتواصل معك.</p>
-              </div>
+            <div id="formSuccess" style="display:none; background:#d4edda; color:#155724; border:1px solid #c3e6cb; border-radius:8px; padding:16px 24px; margin-bottom:24px; text-align:center;">
+              <i class="fas fa-check-circle" style="margin-left:8px;"></i>
+              شكرًا جزيلاً! لقد تم إرسال رسالتك بنجاح. سنرد عليك في أقرب وقت.
+            </div>
+            <div id="formError" style="display:none; background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; border-radius:8px; padding:16px 24px; margin-bottom:24px; text-align:center;">
+              <i class="fas fa-exclamation-circle" style="margin-left:8px;"></i>
+              حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة على <a href="mailto:kooperationen@fachkraftebrucke.de">kooperationen@fachkraftebrucke.de</a>.
             </div>
 
-            <!-- Contact Form (Formspree) -->
-            <div class="contact-form-container">
-              <h2>أرسل إلينا رسالة</h2>
-              <p style="margin-bottom: 1.5rem; color: var(--medium-gray);">جميع الحقول المميزة بعلامة النجمة (*) مطلوبة وإجبارية.</p>
-
-              <!-- FormStatus Messages -->
-              <div id="formSuccess" class="form-status success">
-                <i class="fas fa-check-circle"></i> شكرًا لرسالتك! سوف نتواصل معك قريباً في أقرب فرصة.
-              </div>
-              <div id="formError" class="form-status error">
-                <i class="fas fa-exclamation-circle"></i> عذراً، لم تنجح عملية الإرسال! الرجاء المحاولة مرة أخرى أو الكتابة لنا مباشرة على <a href="mailto:kooperationen@fachkraftebrucke.de">kooperationen@fachkraftebrucke.de</a>.
+            <form id="contactForm" action="https://formspree.io/f/xjgaezvv" method="POST" class="form-grid">
+              <!-- Name -->
+              <div class="form-group">
+                <label for="name">الاسم واللقب *</label>
+                <input type="text" id="name" name="name" required />
               </div>
 
-              <form id="contactForm" action="https://formspree.io/f/xjgaezvv" method="POST" class="form-grid">
-                <!-- Name -->
-                <div class="form-group">
-                  <label for="name">الاسم واللقب *</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <!-- E-Mail -->
-                <div class="form-group">
-                  <label for="email">البريد الإلكتروني *</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <!-- Telephone -->
-                <div class="form-group full-width">
-                  <label for="phone">رقم الهاتف (اختياري)</label>
-                  <input type="tel" id="phone" name="phone" />
-                </div>
-                <!-- Subject -->
-                <div class="form-group full-width">
-                  <label for="subject">الموضوع *</label>
-                  <select id="subject" name="_subject" required>
-                    <option value="">الرجاء التحديد</option>
-                    <option value="طلب كصاحب عمل (مستشفى)">طلب كصاحب عمل</option>
-                    <option value="طلب كمرشح (ممرض)">طلب كمرشح</option>
-                    <option value="استفسار عام">استفسار عام</option>
-                  </select>
-                </div>
-                <!-- Message -->
-                <div class="form-group full-width">
-                  <label for="message">رسالتك *</label>
-                  <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <!-- Privacy Checkbox -->
-                <div class="form-group full-width checkbox-group">
-                  <input type="checkbox" id="privacy" name="privacy" required />
-                  <label for="privacy" class="small-text">
-                    أوافق على أنه سيتم جمع بياناتي وتخزينها إلكترونياً للإجابة على طلبي والتعامل معه. 
-                    لقد قرأت <a href="datenschutz.html" target="_blank">سياسة الخصوصية</a> ووافقت عليها. *
-                  </label>
-                </div>
+              <!-- E-Mail -->
+              <div class="form-group">
+                <label for="email">البريد الإلكتروني *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
 
-                <div class="form-group full-width" style="margin-top: 1rem;">
-                  <button type="submit" class="btn btn-primary btn-large">
-                    <i class="fas fa-paper-plane"></i> إرسال الرسالة
-                  </button>
-                </div>
-              </form>
-            </div>
+              <!-- Betreff (Dropdown) -->
+              <div class="form-group full-width">
+                <label for="subject">الموضوع *</label>
+                <select id="subject" name="_subject" required>
+                  <option value="">رجاءً اختيار</option>
+                  <option value="طلب كصاحب عمل (مستشفى)">طلب كصاحب عمل</option>
+                  <option value="طلب كمرشح (ممرض/علاج طبيعي)">طلب كمرشح</option>
+                  <option value="استفسار عام">استفسار عام</option>
+                </select>
+              </div>
+
+              <!-- Nachricht -->
+              <div class="form-group full-width">
+                <label for="message">الرسالة *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Datenschutz-Checkbox -->
+              <div class="gdpr-checkbox">
+                <input type="checkbox" id="privacy" name="privacy" required />
+                <label for="privacy">
+                  لقد قرأت
+                  <a href="datenschutz.html">سياسة الخصوصية</a>
+                  وأوافق على حفظ بياناتي لأغراض معالجة طلبي والتعامل معه. *
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group full-width text-center">
+                <button type="submit" class="btn btn-primary btn-large">
+                  <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                </button>
+              </div>
+
+              <!-- Hinweis -->
+              <p
+                class="small-text text-center"
+                style="grid-column: span 2; color: var(--medium-gray)"
+              >
+                * حقول إجبارية. سيتم التعامل مع بياناتك بسرية تامة.
+              </p>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="main-footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
+            <div class="footer-logo">
+            </div>
             <p class="footer-tagline">
-              بناة الجسور نحو المستقبل في قطاع الرعاية الصحية.
+              من الكوادر إلى الكوادر – جسور بين تونس وألمانيا.
             </p>
           </div>
           <div class="footer-section">
             <h3>اتصل بنا</h3>
-            <p><i class="fas fa-envelope"></i> kooperationen@fachkraftebrucke.de</p>
+            <p>
+              <i class="fas fa-envelope"></i> kooperationen@fachkraftebrucke.de
+            </p>
           </div>
           <div class="footer-section">
             <h3>روابط قانونية</h3>
@@ -207,7 +201,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 Fachkräftebrücke. جميع الحقوق محفوظة.</p>
+          <p>&copy; 2026 Fachkräftebrücke GmbH. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>
@@ -221,31 +215,21 @@
           const submitBtn = form.querySelector('button[type="submit"]');
           submitBtn.disabled = true;
           submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
-          
-          document.getElementById('formSuccess').style.display = 'none';
-          document.getElementById('formError').style.display = 'none';
 
-          const formData = new FormData(form);
-
+          const data = new FormData(form);
           try {
             const response = await fetch(form.action, {
               method: 'POST',
-              body: formData,
-              headers: {
-                'Accept': 'application/json'
-              }
+              body: data,
+              headers: { 'Accept': 'application/json' }
             });
-
             if (response.ok) {
+              form.style.display = 'none';
               document.getElementById('formSuccess').style.display = 'block';
-              form.reset();
-              submitBtn.disabled = false;
-              submitBtn.innerHTML = '<i class="fas fa-check"></i> تم الأمر';
-              setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
-              }, 3000);
             } else {
-              throw new Error('Server error');
+              document.getElementById('formError').style.display = 'block';
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
             }
           } catch (err) {
             document.getElementById('formError').style.display = 'block';
@@ -265,7 +249,7 @@
           if (type === 'employer') {
             subjectSelect.value = 'طلب كصاحب عمل (مستشفى)';
           } else if (type === 'candidate') {
-            subjectSelect.value = 'طلب كمرشح (ممرض)';
+            subjectSelect.value = 'طلب كمرشح (ممرض/علاج طبيعي)';
           }
         }
       });

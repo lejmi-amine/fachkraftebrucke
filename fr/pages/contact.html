@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Fachkräftebrücke</title>
+    <title>Contact | Fachkräftebrücke – Nous sommes là pour vous</title>
     <meta
       name="description"
-      content="Prenez contact avec nous. Nous nous réjouissons d'échanger avec vous – pour un avenir en Allemagne ou pour renforcer votre équipe de soins."
+      content="Contactez Fachkräftebrücke : pour les cliniques, les candidats ou pour des demandes générales. Nous répondons rapidement et personnellement."
     />
 
     <link
@@ -17,8 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="../../style.css" />
+
     <link rel="icon" type="image/png" href="../../logo.png" />
   </head>
   <body>
@@ -42,8 +42,8 @@
               <img
                 src="../../logo_4k.png"
                 alt="Fachkräftebrücke Agence de recrutement"
-                width="220"
-                height="140"
+                width="220px"
+                height="140px"
               />
             </a>
           </div>
@@ -62,7 +62,9 @@
                 <a href="candidates.html" class="nav-link">Pour les candidats</a>
               </li>
               <li><a href="about.html" class="nav-link">À propos</a></li>
-              <li><a href="contact.html" class="nav-link active">Contact</a></li>
+              <li>
+                <a href="contact.html" class="nav-link active">Contact</a>
+              </li>
             </ul>
             <div class="language-selector">
               <span class="current-lang">FR</span>
@@ -79,123 +81,115 @@
     </header>
 
     <main>
+      <!-- Hero-Bereich -->
       <section class="page-hero">
         <div class="container">
-          <h1>Contactez-nous</h1>
+          <span class="mission-badge">Par des professionnels pour des professionnels</span>
+          <h1>Contact</h1>
           <p class="subheadline">
-            Nous trouverons ensemble la meilleure solution. Écrivez-nous pour un premier entretien sans engagement.
+            Vous avez des questions ? Nous sommes là pour vous – rapidement, personnellement et simplement.
           </p>
         </div>
       </section>
 
-      <section class="section section-white">
+      <!-- Kontaktformular -->
+      <section class="section section-light-gray">
         <div class="container">
-          <div class="contact-wrapper">
-            <!-- Contact Info -->
-            <div class="contact-info">
-              <h2>Contact Direct</h2>
-              <p>Que vous ayez des questions sur la procédure ou sur nos candidats, nous sommes à votre disposition.</p>
+          <div class="contact-form-section">
+            <h2 class="text-center" style="margin-bottom: var(--space-lg)">
+              Écrivez-nous directement ici – nous attendons votre message !
+            </h2>
 
-              <div class="info-block" style="margin-top: 2rem;">
-                <div style="display: flex; align-items:flex-start; margin-bottom: 1.5rem;">
-                  <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--teal); margin-right: 1rem; margin-top: 4px;"></i>
-                  <div>
-                    <h4 style="margin-bottom: 0.25rem;">E-Mail (Partenariats)</h4>
-                    <a href="mailto:kooperationen@fachkraftebrucke.de" style="color: var(--blue); text-decoration: none;">kooperationen@fachkraftebrucke.de</a>
-                  </div>
-                </div>
-
-                <div style="display: flex; align-items:flex-start; margin-bottom: 1.5rem;">
-                  <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--teal); margin-right: 1rem; margin-top: 4px;"></i>
-                  <div>
-                    <h4 style="margin-bottom: 0.25rem;">Bureau</h4>
-                    <p style="color: var(--medium-gray); margin: 0;">(Siège social actuellement en cours de finalisation)<br />Tunisie & Allemagne</p>
-                  </div>
-                </div>
-              </div>
-
-              <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-                <h4 style="color: var(--navy); margin-bottom: 0.5rem;"><i class="fas fa-info-circle"></i> Info pour les candidats</h4>
-                <p class="small-text" style="margin: 0;">Veuillez inclure de brèves informations sur votre niveau de formation (diplôme) et d'éventuelles connaissances en allemand. Cela nous facilitera le processus.</p>
-              </div>
+            <div id="formSuccess" style="display:none; background:#d4edda; color:#155724; border:1px solid #c3e6cb; border-radius:8px; padding:16px 24px; margin-bottom:24px; text-align:center;">
+              <i class="fas fa-check-circle" style="margin-right:8px;"></i>
+              Merci beaucoup ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.
+            </div>
+            <div id="formError" style="display:none; background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; border-radius:8px; padding:16px 24px; margin-bottom:24px; text-align:center;">
+              <i class="fas fa-exclamation-circle" style="margin-right:8px;"></i>
+              Erreur lors de l'envoi. Veuillez réessayer ou nous écrire directement à <a href="mailto:kooperationen@fachkraftebrucke.de">kooperationen@fachkraftebrucke.de</a>.
             </div>
 
-            <!-- Contact Form (Formspree) -->
-            <div class="contact-form-container">
-              <h2>Envoyez-nous un message</h2>
-              <p style="margin-bottom: 1.5rem; color: var(--medium-gray);">Tous les champs marqués d'un * sont obligatoires.</p>
-
-              <!-- FormStatus Messages -->
-              <div id="formSuccess" class="form-status success">
-                <i class="fas fa-check-circle"></i> Merci pour votre message ! Nous vous répondrons très prochainement.
-              </div>
-              <div id="formError" class="form-status error">
-                <i class="fas fa-exclamation-circle"></i> Échec de l'envoi. Veuillez réessayer ou utiliser notre adresse e-mail directe : <a href="mailto:kooperationen@fachkraftebrucke.de">kooperationen@fachkraftebrucke.de</a>.
+            <form id="contactForm" action="https://formspree.io/f/xjgaezvv" method="POST" class="form-grid">
+              <!-- Name -->
+              <div class="form-group">
+                <label for="name">Nom *</label>
+                <input type="text" id="name" name="name" required />
               </div>
 
-              <form id="contactForm" action="https://formspree.io/f/xjgaezvv" method="POST" class="form-grid">
-                <!-- Nom -->
-                <div class="form-group">
-                  <label for="name">Nom *</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <!-- E-Mail -->
-                <div class="form-group">
-                  <label for="email">E-Mail *</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <!-- Telephone -->
-                <div class="form-group full-width">
-                  <label for="phone">Téléphone (Optionnel)</label>
-                  <input type="tel" id="phone" name="phone" />
-                </div>
-                <!-- Sujet -->
-                <div class="form-group full-width">
-                  <label for="subject">Sujet *</label>
-                  <select id="subject" name="_subject" required>
-                    <option value="">Sélectionnez</option>
-                    <option value="Demande en tant qu'employeur (Clinique)">Demande en tant qu'employeur</option>
-                    <option value="Demande en tant que candidat (Infirmier)">Demande en tant que candidat</option>
-                    <option value="Demande générale">Demande générale</option>
-                  </select>
-                </div>
-                <!-- Message -->
-                <div class="form-group full-width">
-                  <label for="message">Votre Message *</label>
-                  <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <!-- Privacy Checkbox -->
-                <div class="form-group full-width checkbox-group">
-                  <input type="checkbox" id="privacy" name="privacy" required />
-                  <label for="privacy" class="small-text">
-                    J'autorise que les données recueillies soient stockées électroniquement pour le traitement de ma demande. 
-                    <a href="datenschutz.html" target="_blank">Politique de confidentialité</a> lu et accepté. *
-                  </label>
-                </div>
+              <!-- E-Mail -->
+              <div class="form-group">
+                <label for="email">E-Mail *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
 
-                <div class="form-group full-width" style="margin-top: 1rem;">
-                  <button type="submit" class="btn btn-primary btn-large">
-                    <i class="fas fa-paper-plane"></i> Envoyer le message
-                  </button>
-                </div>
-              </form>
-            </div>
+              <!-- Betreff (Dropdown) -->
+              <div class="form-group full-width">
+                <label for="subject">Sujet *</label>
+                <select id="subject" name="_subject" required>
+                  <option value="">Sélectionnez</option>
+                  <option value="Demande en tant qu'employeur (Clinique)">Demande en tant qu'employeur</option>
+                  <option value="Demande en tant que candidat (Infirmier)">Demande en tant que candidat</option>
+                  <option value="Demande générale">Demande générale</option>
+                </select>
+              </div>
+
+              <!-- Nachricht -->
+              <div class="form-group full-width">
+                <label for="message">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Datenschutz-Checkbox -->
+              <div class="gdpr-checkbox">
+                <input type="checkbox" id="privacy" name="privacy" required />
+                <label for="privacy">
+                  J'ai lu la
+                  <a href="datenschutz.html">Politique de confidentialité</a>
+                  et j'accepte que mes données soient enregistrées pour le traitement de ma demande. *
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group full-width text-center">
+                <button type="submit" class="btn btn-primary btn-large">
+                  <i class="fas fa-paper-plane"></i> Envoyer le message
+                </button>
+              </div>
+
+              <!-- Hinweis -->
+              <p
+                class="small-text text-center"
+                style="grid-column: span 2; color: var(--medium-gray)"
+              >
+                * Champs obligatoires. Vos données seront traitées de manière confidentielle.
+              </p>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="main-footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
+            <div class="footer-logo">
+            </div>
             <p class="footer-tagline">
-              Bâtisseurs de ponts dans le secteur de la santé.
+              Par des professionnels pour des professionnels – Des ponts entre la Tunisie et l'Allemagne.
             </p>
           </div>
           <div class="footer-section">
             <h3>Contact</h3>
-            <p><i class="fas fa-envelope"></i> kooperationen@fachkraftebrucke.de</p>
+            <p>
+              <i class="fas fa-envelope"></i> kooperationen@fachkraftebrucke.de
+            </p>
           </div>
           <div class="footer-section">
             <h3>Mentions légales</h3>
@@ -207,7 +201,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 Fachkräftebrücke. Tous droits réservés.</p>
+          <p>&copy; 2026 Fachkräftebrücke GmbH. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
@@ -220,32 +214,22 @@
           e.preventDefault();
           const submitBtn = form.querySelector('button[type="submit"]');
           submitBtn.disabled = true;
-          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
-          
-          document.getElementById('formSuccess').style.display = 'none';
-          document.getElementById('formError').style.display = 'none';
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
 
-          const formData = new FormData(form);
-
+          const data = new FormData(form);
           try {
             const response = await fetch(form.action, {
               method: 'POST',
-              body: formData,
-              headers: {
-                'Accept': 'application/json'
-              }
+              body: data,
+              headers: { 'Accept': 'application/json' }
             });
-
             if (response.ok) {
+              form.style.display = 'none';
               document.getElementById('formSuccess').style.display = 'block';
-              form.reset();
-              submitBtn.disabled = false;
-              submitBtn.innerHTML = '<i class="fas fa-check"></i> Envoyé';
-              setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
-              }, 3000);
             } else {
-              throw new Error('Server error');
+              document.getElementById('formError').style.display = 'block';
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
             }
           } catch (err) {
             document.getElementById('formError').style.display = 'block';
