@@ -127,11 +127,11 @@
               <!-- Betreff (Dropdown) -->
               <div class="form-group full-width">
                 <label for="subject">Betreff *</label>
-                <select id="subject" name="subject" required>
+                <select id="subject" name="_subject" required>
                   <option value="">Bitte wählen</option>
-                  <option value="employer">Anfrage als Arbeitgeber</option>
-                  <option value="candidate">Anfrage als Bewerber</option>
-                  <option value="general">Allgemeine Anfrage</option>
+                  <option value="Anfrage als Arbeitgeber (Klinik)">Anfrage als Arbeitgeber</option>
+                  <option value="Anfrage als Bewerber (Fachkraft)">Anfrage als Bewerber</option>
+                  <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
                 </select>
               </div>
 
@@ -243,7 +243,21 @@
           }
         });
       }
-    </script>
 
+      // Auto-select dropdown based on URL parameter
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+        const subjectSelect = document.getElementById('subject');
+        
+        if (subjectSelect) {
+          if (type === 'employer') {
+            subjectSelect.value = 'Anfrage als Arbeitgeber (Klinik)';
+          } else if (type === 'candidate') {
+            subjectSelect.value = 'Anfrage als Bewerber (Fachkraft)';
+          }
+        }
+      });
+    </script>
   </body>
 </html>
