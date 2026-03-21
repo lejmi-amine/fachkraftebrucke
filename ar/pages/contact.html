@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اتصل بنا | Fachkräftebrücke</title>
+    <meta
+      name="description"
+      content="تواصل معنا. نتطلع إلى سماع رسائلكم – لضمان مستقبلك في ألمانيا أو للمستشفيات لدعم فريق الرعاية الخاص بك."
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" type="image/png" href="../../logo.png" />
+  </head>
+  <body>
+    <!-- Cookie Banner -->
+    <div id="cookieConsent" class="cookie-banner">
+      <div class="cookie-content">
+        <p>
+          نحن نستخدم ملفات تعريف الارتباط لتجربة مستخدم أفضل.
+          <a href="datenschutz.html">سياسة الخصوصية</a>
+        </p>
+        <button id="cookieAccept" class="btn btn-small">موافقة</button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo">
+            <a href="../index.html">
+              <img
+                src="../../logo_4k.png"
+                alt="Fachkräftebrücke وكالة توظيف"
+                width="220"
+                height="140"
+              />
+            </a>
+          </div>
+          <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+              <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+              <li>
+                <a href="employers.html" class="nav-link">لأصحاب العمل</a>
+              </li>
+              <li>
+                <a href="candidates.html" class="nav-link">للمرشحين</a>
+              </li>
+              <li><a href="about.html" class="nav-link">من نحن</a></li>
+              <li><a href="contact.html" class="nav-link active">اتصل بنا</a></li>
+            </ul>
+            <div class="language-selector">
+              <span class="current-lang">AR</span>
+              <ul class="lang-dropdown">
+                <li><a href="../../pages/contact.html">DE</a></li>
+                <li><a href="../../fr/pages/contact.html">FR</a></li>
+                <li><a href="contact.html" class="active">AR</a></li>
+                <li><a href="#" class="disabled">EN (soon)</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>اتصل بنا</h1>
+          <p class="subheadline">
+            معاً نجد الحل الأمثل. اكتب إلينا للحصول على استشارة أولية بدون أي التزامات.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container">
+          <div class="contact-wrapper">
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <h2>الاتصال المباشر</h2>
+              <p>سواء كانت لديك أسئلة حول إجراءات العمل، عقود العمل، أو خدماتنا للمرشحين – نحن دائماً هنا للرد.</p>
+
+              <div class="info-block" style="margin-top: 2rem;">
+                <div style="display: flex; align-items:flex-start; margin-bottom: 1.5rem;">
+                  <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--teal); margin-left: 1rem; margin-top: 4px;"></i>
+                  <div>
+                    <h4 style="margin-bottom: 0.25rem;">البريد الإلكتروني للتعاون</h4>
+                    <a href="mailto:kooperationen@fachkraftebrucke.de" style="color: var(--blue); text-decoration: none;">kooperationen@fachkraftebrucke.de</a>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items:flex-start; margin-bottom: 1.5rem;">
+                  <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--teal); margin-left: 1rem; margin-top: 4px;"></i>
+                  <div>
+                    <h4 style="margin-bottom: 0.25rem;">المكتب</h4>
+                    <p style="color: var(--medium-gray); margin: 0;">(المقر والمكاتب قيد التأسيس النهائي)<br />تونس وألمانيا</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                <h4 style="color: var(--navy); margin-bottom: 0.5rem;"><i class="fas fa-info-circle"></i> ملاحظات للمرشحين</h4>
+                <p class="small-text" style="margin: 0;">الرجاء تضمين معلومات موجزة ومفيدة حول مستوى تعليمك (أو الدبلوم) الذي تملكه ومستواك في اللغة الألمانية. فهذا سيسهل علينا الإجابة ومساعدتك والتواصل معك.</p>
+              </div>
+            </div>
+
+            <!-- Contact Form (Formspree) -->
+            <div class="contact-form-container">
+              <h2>أرسل إلينا رسالة</h2>
+              <p style="margin-bottom: 1.5rem; color: var(--medium-gray);">جميع الحقول المميزة بعلامة النجمة (*) مطلوبة وإجبارية.</p>
+
+              <!-- FormStatus Messages -->
+              <div id="formSuccess" class="form-status success">
+                <i class="fas fa-check-circle"></i> شكرًا لرسالتك! سوف نتواصل معك قريباً في أقرب فرصة.
+              </div>
+              <div id="formError" class="form-status error">
+                <i class="fas fa-exclamation-circle"></i> عذراً، لم تنجح عملية الإرسال! الرجاء المحاولة مرة أخرى أو الكتابة لنا مباشرة على <a href="mailto:kooperationen@fachkraftebrucke.de">kooperationen@fachkraftebrucke.de</a>.
+              </div>
+
+              <form id="contactForm" action="https://formspree.io/f/xjgaezvv" method="POST" class="form-grid">
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="name">الاسم واللقب *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <!-- E-Mail -->
+                <div class="form-group">
+                  <label for="email">البريد الإلكتروني *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <!-- Telephone -->
+                <div class="form-group full-width">
+                  <label for="phone">رقم الهاتف (اختياري)</label>
+                  <input type="tel" id="phone" name="phone" />
+                </div>
+                <!-- Subject -->
+                <div class="form-group full-width">
+                  <label for="subject">الموضوع *</label>
+                  <select id="subject" name="_subject" required>
+                    <option value="">الرجاء التحديد</option>
+                    <option value="طلب كصاحب عمل (مستشفى)">طلب كصاحب عمل</option>
+                    <option value="طلب كمرشح (ممرض)">طلب كمرشح</option>
+                    <option value="استفسار عام">استفسار عام</option>
+                  </select>
+                </div>
+                <!-- Message -->
+                <div class="form-group full-width">
+                  <label for="message">رسالتك *</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <!-- Privacy Checkbox -->
+                <div class="form-group full-width checkbox-group">
+                  <input type="checkbox" id="privacy" name="privacy" required />
+                  <label for="privacy" class="small-text">
+                    أوافق على أنه سيتم جمع بياناتي وتخزينها إلكترونياً للإجابة على طلبي والتعامل معه. 
+                    لقد قرأت <a href="datenschutz.html" target="_blank">سياسة الخصوصية</a> ووافقت عليها. *
+                  </label>
+                </div>
+
+                <div class="form-group full-width" style="margin-top: 1rem;">
+                  <button type="submit" class="btn btn-primary btn-large">
+                    <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <p class="footer-tagline">
+              بناة الجسور نحو المستقبل في قطاع الرعاية الصحية.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>اتصل بنا</h3>
+            <p><i class="fas fa-envelope"></i> kooperationen@fachkraftebrucke.de</p>
+          </div>
+          <div class="footer-section">
+            <h3>روابط قانونية</h3>
+            <ul>
+              <li><a href="impressum.html">معلومات قانونية</a></li>
+              <li><a href="datenschutz.html">سياسة الخصوصية</a></li>
+              <li><a href="agb.html">الشروط والأحكام</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Fachkräftebrücke. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const submitBtn = form.querySelector('button[type="submit"]');
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+          
+          document.getElementById('formSuccess').style.display = 'none';
+          document.getElementById('formError').style.display = 'none';
+
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+
+            if (response.ok) {
+              document.getElementById('formSuccess').style.display = 'block';
+              form.reset();
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = '<i class="fas fa-check"></i> تم الأمر';
+              setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
+              }, 3000);
+            } else {
+              throw new Error('Server error');
+            }
+          } catch (err) {
+            document.getElementById('formError').style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
+          }
+        });
+      }
+
+      // Auto-select dropdown based on URL parameter
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+        const subjectSelect = document.getElementById('subject');
+        
+        if (subjectSelect) {
+          if (type === 'employer') {
+            subjectSelect.value = 'طلب كصاحب عمل (مستشفى)';
+          } else if (type === 'candidate') {
+            subjectSelect.value = 'طلب كمرشح (ممرض)';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
