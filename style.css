@@ -1328,12 +1328,11 @@ body {
 
   .line-chart {
     height: 140px;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.25rem;
   }
 
   .chart-point {
-    width: 50px;
+    width: 45px;
   }
 
   .point-dot {
@@ -1372,7 +1371,7 @@ body {
   }
 
   .chart-point {
-    width: 40px;
+    width: 35px;
   }
 
   .point-dot {
@@ -1391,7 +1390,7 @@ body {
   }
 
   .bar-label {
-    width: 70px;
+    width: 60px;
     text-align: right;
     font-size: 0.8rem;
   }
