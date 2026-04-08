@@ -991,19 +991,22 @@ body {
 
   .chart-vertical {
     gap: var(--space-sm);
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .chart-column {
-    width: 55px;
+    width: 75px;
+    min-width: 70px;
   }
 
   .bar {
-    width: 35px;
+    width: 42px;
   }
 
   .bar-value {
     font-size: 0.65rem;
-    top: -24px;
+    top: -22px;
     padding: 2px 5px;
   }
 }
@@ -1221,6 +1224,17 @@ body {
   color: var(--navy);
   min-width: 80px;
   text-align: left;
+}
+.chart-column .bar-label {
+  width: auto;
+  text-align: center;
+  display: block;
+}
+.chart-box .chart-column {
+  min-width: 70px;
+}
+.chart-box .bar-value {
+  z-index: 1;
 }
 
 /* Fußnoten / Quellen */
@@ -1746,7 +1760,8 @@ html[dir="rtl"] .main-nav {
   margin-left: 0;
 }
 
-html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-subtitle {
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .hero-subtitle {
   text-align: right;
 }
 
@@ -1755,8 +1770,8 @@ html[dir="rtl"] .btn i {
   margin-left: 8px;
 }
 
-html[dir="rtl"] .feature-card, 
-html[dir="rtl"] .step-content, 
+html[dir="rtl"] .feature-card,
+html[dir="rtl"] .step-content,
 html[dir="rtl"] .req-card,
 html[dir="rtl"] .content-card,
 html[dir="rtl"] .hero-content {
