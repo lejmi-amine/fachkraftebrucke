@@ -1176,11 +1176,15 @@ body {
 }
 
 .bar-value {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--teal);
   white-space: nowrap;
   min-width: auto;
+  background: var(--light-teal);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .bar-wrapper {
@@ -1196,13 +1200,6 @@ body {
   height: 100%;
   background: linear-gradient(90deg, var(--teal), #0a2463);
   border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 8px;
-  color: white;
-  font-size: 0.8rem;
-  font-weight: 600;
   transition: width 0.3s ease;
 }
 
