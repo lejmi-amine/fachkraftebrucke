@@ -1327,12 +1327,15 @@ body {
   }
 
   .line-chart {
-    height: 140px;
-    gap: 0.25rem;
+    height: auto;
+    gap: 0.5rem;
+    min-height: 80px;
+    align-items: flex-end;
   }
 
   .chart-point {
     width: 45px;
+    margin-bottom: 0 !important;
   }
 
   .point-dot {
@@ -1365,13 +1368,16 @@ body {
   }
 
   .line-chart {
-    height: 120px;
-    gap: 0;
+    height: auto;
+    min-height: 70px;
+    gap: 0.25rem;
     justify-content: space-between;
+    align-items: flex-end;
   }
 
   .chart-point {
-    width: 35px;
+    width: 38px;
+    margin-bottom: 0 !important;
   }
 
   .point-dot {
@@ -1390,7 +1396,7 @@ body {
   }
 
   .bar-label {
-    width: 60px;
+    width: 65px;
     text-align: right;
     font-size: 0.8rem;
   }
