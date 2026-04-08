@@ -72,7 +72,7 @@
                 <li><a href="../../pages/contact.html">DE</a></li>
                 <li><a href="../../fr/pages/contact.html">FR</a></li>
                 <li><a href="contact.html" class="active">AR</a></li>
-                <li><a href="#" class="disabled">EN (soon)</a></li>
+                <li><a href="../../en/pages/contact.html">EN</a></li>
               </ul>
             </div>
           </nav>
@@ -100,16 +100,49 @@
               راسلنا مباشرة هنا – نحن نتطلع لرسالتك!
             </h2>
 
-            <div id="formSuccess" style="display:none; background:#d4edda; color:#155724; border:1px solid #c3e6cb; border-radius:8px; padding:16px 24px; margin-bottom:24px; text-align:center;">
-              <i class="fas fa-check-circle" style="margin-left:8px;"></i>
+            <div
+              id="formSuccess"
+              style="
+                display: none;
+                background: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+                border-radius: 8px;
+                padding: 16px 24px;
+                margin-bottom: 24px;
+                text-align: center;
+              "
+            >
+              <i class="fas fa-check-circle" style="margin-left: 8px"></i>
               شكرًا جزيلاً! لقد تم إرسال رسالتك بنجاح. سنرد عليك في أقرب وقت.
             </div>
-            <div id="formError" style="display:none; background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; border-radius:8px; padding:16px 24px; margin-bottom:24px; text-align:center;">
-              <i class="fas fa-exclamation-circle" style="margin-left:8px;"></i>
-              حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة على <a href="mailto:kooperationen@fachkraftebrucke.de">kooperationen@fachkraftebrucke.de</a>.
+            <div
+              id="formError"
+              style="
+                display: none;
+                background: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+                border-radius: 8px;
+                padding: 16px 24px;
+                margin-bottom: 24px;
+                text-align: center;
+              "
+            >
+              <i class="fas fa-exclamation-circle" style="margin-left: 8px"></i>
+              حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة
+              على
+              <a href="mailto:kooperationen@fachkraftebrucke.de"
+                >kooperationen@fachkraftebrucke.de</a
+              >.
             </div>
 
-            <form id="contactForm" action="https://formspree.io/f/xjgaezvv" method="POST" class="form-grid">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xjgaezvv"
+              method="POST"
+              class="form-grid"
+            >
               <!-- Name -->
               <div class="form-group">
                 <label for="name">الاسم واللقب *</label>
@@ -179,8 +212,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <div class="footer-logo">
-            </div>
+            <div class="footer-logo"></div>
             <p class="footer-tagline">
               من الكوادر إلى الكوادر – جسور بين تونس وألمانيا.
             </p>
@@ -208,33 +240,36 @@
 
     <script src="../../script.js"></script>
     <script>
-      const form = document.getElementById('contactForm');
+      const form = document.getElementById("contactForm");
       if (form) {
-        form.addEventListener('submit', async function(e) {
+        form.addEventListener("submit", async function (e) {
           e.preventDefault();
           const submitBtn = form.querySelector('button[type="submit"]');
           submitBtn.disabled = true;
-          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+          submitBtn.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
 
           const data = new FormData(form);
           try {
             const response = await fetch(form.action, {
-              method: 'POST',
+              method: "POST",
               body: data,
-              headers: { 'Accept': 'application/json' }
+              headers: { Accept: "application/json" },
             });
             if (response.ok) {
-              form.style.display = 'none';
-              document.getElementById('formSuccess').style.display = 'block';
+              form.style.display = "none";
+              document.getElementById("formSuccess").style.display = "block";
             } else {
-              document.getElementById('formError').style.display = 'block';
+              document.getElementById("formError").style.display = "block";
               submitBtn.disabled = false;
-              submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
+              submitBtn.innerHTML =
+                '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
             }
           } catch (err) {
-            document.getElementById('formError').style.display = 'block';
+            document.getElementById("formError").style.display = "block";
             submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
+            submitBtn.innerHTML =
+              '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
           }
         });
       }
@@ -242,14 +277,14 @@
       // Auto-select dropdown based on URL parameter
       document.addEventListener("DOMContentLoaded", () => {
         const urlParams = new URLSearchParams(window.location.search);
-        const type = urlParams.get('type');
-        const subjectSelect = document.getElementById('subject');
-        
+        const type = urlParams.get("type");
+        const subjectSelect = document.getElementById("subject");
+
         if (subjectSelect) {
-          if (type === 'employer') {
-            subjectSelect.value = 'طلب كصاحب عمل (مستشفى)';
-          } else if (type === 'candidate') {
-            subjectSelect.value = 'طلب كمرشح (ممرض/علاج طبيعي)';
+          if (type === "employer") {
+            subjectSelect.value = "طلب كصاحب عمل (مستشفى)";
+          } else if (type === "candidate") {
+            subjectSelect.value = "طلب كمرشح (ممرض/علاج طبيعي)";
           }
         }
       });
